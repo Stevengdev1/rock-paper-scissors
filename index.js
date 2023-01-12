@@ -1,6 +1,6 @@
   const getUserChoice = (userInput) => {
-    userInput = userInput.toLowerCase();
-   if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb' ) {
+    userInput = userInput.toLowerCase(); //toLowerCase() Is used make sure that the user only types in lowercase.  
+   if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'fire' ) {
     return userInput;
   } else { 
     console.log('Error, please type one the following words: "rock", "paper", "scissors".')
@@ -46,13 +46,13 @@ const determineWinner = (userChoice, computerChoice) => {
       return "Congratulations, you won!";
     }
   }
-  if (userChoice === 'bomb') {
+  if (userChoice === 'fire') {
     return 'Congratulations, you won!';
   }
 }
 
 const playGame = () => {
-  const userChoice = getUserChoice('paper'); //If we type the cheat code 'bomb' here we will always win!
+  const userChoice = getUserChoice('rock'); //If we type the cheat code 'fire' here we will always win!
   const computerChoice = getComputerChoice();
   console.log(`You pulled: ${userChoice}`);
   console.log(`The computer pulled: ${computerChoice}`);
@@ -63,4 +63,11 @@ const playGame = () => {
 
 //This game is played by invoking the function playGame()
 playGame()
+
+
+
+
+
+
+
 
